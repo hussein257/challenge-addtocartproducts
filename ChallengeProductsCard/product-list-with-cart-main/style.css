@@ -1,0 +1,584 @@
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Red Hat Text", sans-serif;
+        width: 100%;
+        height: 100vh;
+        gap: 20px;
+        gap: 50px;
+        background-color: rgb(240, 233, 224);
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin: 50px;
+        padding-bottom: 20px;
+    }
+
+    .header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0px 10px;
+    }
+
+    .header h1 {
+        text-transform: capitalize;
+    }
+
+    .shoopin_icon {
+        display: flex;
+        position: relative;
+    }
+    
+    .shoopin_icon i {
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .shoopin_icon span {
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        background-color: red;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        top: -20px;
+        left: 25px;
+    }
+        .products_container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        gap: 10px;
+    }
+    .products_content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgb(240, 233, 224);
+        padding: 10px;
+        border-radius: 20px;
+    }
+    .products_content img {
+        width: 250px;
+        height: max-content;
+        border-radius: 10px;
+        position: relative;
+        
+    }
+    .btn_content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        margin-top: 145px;
+        margin-left: 30px;
+    }
+
+
+
+    button {
+        background-color: #ffffff;
+        font-family: RedHatText-bold;
+        display: inline-block; /*inline-block*/
+        width: 10em;
+        height: 3em;
+        line-height: 2.5em;
+        margin: 20px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        border: #9e9e9e 2px solid ;
+        transition: color 0.5s;
+        z-index: 1;
+        font-size: 14px;
+        border-radius: 25px;
+        font-weight: 500;
+        color: #222222;
+        
+    }
+
+    button svg {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    button:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: #2b2a2a;
+        height: 150px;
+        width: 200px;
+        border-radius: 50%;
+    }
+
+    button:hover {
+        background-color: #c0491a;
+        color: #fff;
+
+    }
+
+
+
+    button:before {
+        top: 100%;
+        left: 100%;
+        transition: all 0.5s;
+    }
+
+    button:hover:before {
+        top: -30px;
+        left: -30px;
+    }
+
+    button:active:before {
+        background: #c0491a;
+        transition: background 0s;
+    }
+    .details {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        position: relative;
+        top: 40px;
+        
+    }
+
+    .details h4 {
+        color: #858484;
+        font-size: 16px;
+        text-transform: capitalize;
+        font-weight: 500;
+    }
+    .details h3 {
+        color: black;
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .details h2 {
+        color: #ce4320;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    .quantity_btn {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        width: 9em;
+        height: 2.6em;
+        background-color: #c0491a;
+        padding: 10px;
+        border-radius: 20px;
+        line-height: 2.5em;
+        color: #fff;
+        margin-left: 20px;
+    }
+
+    .quantity_btn .plus,
+    .minus {
+        background-color: #c0491a;
+        color: #ffffff;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-weight: 700;
+        border: #fff solid 1px;
+    }
+
+
+    .shoop_cart {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        width: 400px;
+        border-radius: 20px 0px 0px 20px;
+        position: fixed;
+        top: 10px;
+        right: -400px;
+        padding: 20px;
+        gap: 20px;
+        min-height: 400px;
+        max-height: 600px;
+        transition: 0.5s;
+        overflow: scroll;
+        scroll-padding-top: 7em;
+    }
+
+    .shoop_cart::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+    background-color: transparent;
+    }
+
+
+
+
+    .new_shoop_cart {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        width: 400px;
+        border-radius: 20px 0px 0px 20px;
+        position: fixed;
+        top: 10px;
+        right: 0;
+        padding: 20px;
+        gap: 20px;
+        
+        transition: 0.5s;
+    }
+    .shoop_cart h1 {
+        color: #bb3f0f;
+        font-size: 20px;
+        text-transform: capitalize;
+    }
+    .shoop_container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+    .shoop_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        background-color: #ffffff;
+        padding: 10px;
+        color: #4d4747;
+        border-bottom: #eeeeee solid 1px ;
+    }
+    .shoop_content img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    .text_shoop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .text_shoop h3 {
+        font-size: 14px;
+        text-transform: capitalize;
+    }
+
+
+
+    .quantity_price_total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-direction: row;
+    }
+
+        .quantity_shoop {
+        font-size: 12px;
+        font-weight: 700;
+        color: #ce4320;
+    }
+
+
+    .shooop_price_and_totale_shoop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 700;
+        gap: 20px;
+        color: #b9b7b7;
+    }
+
+    .shoop_content i {
+        color: #b9b7b7;
+        background-color: #fff;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 700;
+        border: #b9b7b7 solid 1.5px;
+        cursor: pointer;
+    }
+
+    .totale_price_shoopin {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: small;
+        font-weight: 300;
+        color: #252525;
+    }
+
+    .ordertotal {
+        font-weight: 400;
+    }
+
+    .neutralText {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 40px;
+        background-color: rgb(250, 246, 241);
+        font-size: 12px;
+        margin-left: 50px;
+    }
+
+    .neutralText span {
+        color: black;
+        font-weight: 500;
+    }
+
+    .buttons {
+        position: relative;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .buttons a {
+        width: 50%;
+        height: 40px;
+        text-decoration: none;
+        color: #c0491a;
+        background-color: #fff;
+        border: 3px solid #c0491a;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: capitalize;
+        font-size: 20px;
+    }
+    .buttons .add_to_order {
+        color: #fff;
+        background-color: #c0491a;
+    }
+
+    .order_container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;/*flex*/
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        background-color: #33333362;
+        width: 100%;
+        gap: 20px;
+        min-height: 300px;
+        max-height: 100%;
+        padding-top: 600px;
+        overflow: scroll;
+        scroll-padding-top: 7em;
+    }
+
+    .order_container::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+    background-color: transparent;
+    }
+
+    
+    .finel_order {
+        position: relative;
+        background-color: #fff;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        height: max-content;
+        width: 500px;
+        border-radius: 20px;
+        gap: 20PX;
+    }
+    .finel_order i {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .finel_order i:active {
+        color: red;
+    }
+    .finel_order h1 {
+        color: #c0491a;
+        text-transform: capitalize;
+    }
+    .finel_order p {
+        color: #333;
+        font-size: 15px;
+    }
+    .finel_order_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .only_order {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 450px;
+        background-color: #3d3c3c;
+        padding: 10px;
+        border-radius: 20px;
+        color: #fff;
+        text-transform: capitalize;
+    }
+    .new-details {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    .new-details img {
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+    }
+    .textOrder{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10PX;
+    }
+    .details_price{
+        display: flex;
+        gap: 30PX;
+        color: #fff;
+    }
+        .details_price p{
+        color: #fff;
+        font-weight: 700;
+    }
+
+    .order_totale{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    .order_totale p{
+        color: black;
+        font-weight: 700;
+    }
+    
+    .finel_order button{
+        margin-left: 150PX;
+        --color: #c0491a;
+        font-family: inherit;
+        display: inline-block; /*inline-block*/
+        width: 8em;
+        height: 2.6em;
+        line-height: 2.5em;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        border: 2px solid #c0491a;
+        transition: color 0.5s;
+        z-index: 1;
+        font-size: 17px;
+        border-radius: 6px;
+        font-weight: 500;
+        color: #c0491a;
+    }
+
+    .finel_order button:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: #c0491a;
+        height: 150px;
+        width: 200px;
+        border-radius: 50%;
+    }
+
+    .finel_order button:hover {
+        color: #fff;
+    }
+
+    .finel_order button:before {
+        top: 100%;
+        left: 100%;
+        transition: all 0.7s;
+    }
+
+    .finel_order button:hover:before {
+        top: -30px;
+        left: -30px;
+    }
+
+    .finel_order button:active:before {
+        background: #c0491a;
+        transition: background 0s;
+    }
+    .finel_order_container .thanks_order{
+        background-color: #c0491a;
+        color: #fff;
+        padding: 10px;
+        width: 100%;
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 470px;
+        border-radius: 20px;
+        text-transform: capitalize;
+    }
+    .finel_order_container .error_order{
+        background-color: red;
+        color: #fff;
+        padding: 10px;
+        width: 100%;
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 470px;
+        border-radius: 20px;
+        text-transform: capitalize;
+    }
