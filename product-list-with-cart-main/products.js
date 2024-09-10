@@ -87,6 +87,13 @@
     btn.querySelector(".plus").onclick = () => {
         let quantity = btn.querySelector(".quantity");
         let num_quantity = parseInt(quantity.textContent);
+        
+        count++;
+        document.querySelector(".quantity_value").innerHTML = count;
+        document.querySelector(
+            ".title_cart_shooping"
+        ).innerHTML = `Your cart (${count})`;
+
         quantity.textContent = num_quantity + 1;
         if (!newArray[index]) {1;
         newArray[index] = { ...data_array[index], quantity: 1 };
@@ -96,9 +103,18 @@
         creatProductList();
     };
 
+
+
     btn.querySelector(".minus").onclick = () => {
         let quantity = btn.querySelector(".quantity");
         let num_quantity = parseInt(quantity.textContent);
+
+        count--;
+        document.querySelector(".quantity_value").innerHTML = count;
+        document.querySelector(
+            ".title_cart_shooping"
+        ).innerHTML = `Your cart (${count})`;
+        
         if (num_quantity > 1) {
         quantity.textContent = num_quantity - 1;
         newArray[index].quantity--;
@@ -146,6 +162,7 @@
     }
     };
 
+    
     const removeProduct = (index) => {
     newArray.splice(index, 1);
     creatProductList();
