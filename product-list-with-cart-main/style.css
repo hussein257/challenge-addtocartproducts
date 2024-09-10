@@ -16,6 +16,7 @@
         background-color: rgb(240, 233, 224);
     }
 
+    
     .container {
         display: flex;
         flex-direction: column;
@@ -28,7 +29,7 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
-        padding: 0px 10px;
+        padding: 0px 200px;
     }
 
     .header h1 {
@@ -59,12 +60,21 @@
         top: -20px;
         left: 25px;
     }
-        .products_container {
+    
+    .allproducts {
+        display: flex;
+        justify-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .products_container {
         display: flex;
         flex-wrap: wrap;
         width: 70%;
         gap: 10px;
     }
+
     .products_content {
         display: flex;
         justify-content: center;
@@ -73,6 +83,7 @@
         padding: 10px;
         border-radius: 20px;
     }
+
     .products_content img {
         width: 250px;
         height: max-content;
@@ -80,6 +91,9 @@
         position: relative;
         
     }
+
+
+
     .btn_content {
         display: flex;
         justify-content: center;
@@ -92,6 +106,9 @@
 
 
     button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: #ffffff;
         font-family: RedHatText-bold;
         display: inline-block; /*inline-block*/
@@ -102,15 +119,15 @@
         position: relative;
         cursor: pointer;
         overflow: hidden;
-        border: #9e9e9e 2px solid ;
+        border: #9e9e9e 1px solid ;
         transition: color 0.5s;
-        z-index: 1;
         font-size: 14px;
         border-radius: 25px;
         font-weight: 500;
         color: #222222;
         
     }
+
 
     button svg {
         width: 20px;
@@ -129,9 +146,8 @@
     }
 
     button:hover {
-        background-color: #c0491a;
-        color: #fff;
-
+        color: #c0491a;
+        border: #c0491a solid 1px;
     }
 
 
@@ -142,6 +158,7 @@
         transition: all 0.5s;
     }
 
+    
     button:hover:before {
         top: -30px;
         left: -30px;
@@ -151,6 +168,7 @@
         background: #c0491a;
         transition: background 0s;
     }
+    
     .details {
         display: flex;
         justify-content: center;
@@ -165,14 +183,16 @@
         color: #858484;
         font-size: 16px;
         text-transform: capitalize;
-        font-weight: 500;
+        font-weight: 300;
     }
+
     .details h3 {
         color: black;
         text-transform: capitalize;
         font-size: 16px;
         font-weight: 600;
     }
+    
     .details h2 {
         color: #ce4320;
         font-size: 16px;
@@ -193,6 +213,7 @@
         color: #fff;
         margin-left: 20px;
     }
+    
 
     .quantity_btn .plus,
     .minus {
@@ -209,6 +230,15 @@
         border: #fff solid 1px;
     }
 
+    .quantity_btn .minus:hover {
+        color: #c0491a;
+        background-color: #fff;
+    }    
+
+    .quantity_btn .plus:hover {
+        color: #c0491a;
+        background-color: #fff;
+    } 
 
     .shoop_cart {
         display: flex;
@@ -504,7 +534,7 @@
         color: black;
         font-weight: 700;
     }
-    
+
     .finel_order button{
         margin-left: 150PX;
         --color: #c0491a;
