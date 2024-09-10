@@ -11,6 +11,7 @@
     let shoop_container = document.querySelector(".shoop_container");
     let totale_shoop_price = document.querySelector(".totale_shoop_price");
     const start_new_order = document.querySelector(".start_new_order");
+
     open_shoopin_cart.onclick = () => {
     shoop_cart.classList.add("new_shoop_cart");
     };
@@ -52,7 +53,7 @@
             </button>
             <div class="quantity_btn">
                 <div class="minus"><i class="fa-solid fa-minus"></i></div>
-                <div class="quantity">1</div>
+                <div class="quantity">0</div>
                 <div class="plus"><i class="fa-solid fa-plus"></i></div>
             </div>
             </div>
@@ -87,7 +88,7 @@
         let quantity = btn.querySelector(".quantity");
         let num_quantity = parseInt(quantity.textContent);
         quantity.textContent = num_quantity + 1;
-        if (!newArray[index]) {
+        if (!newArray[index]) {1;
         newArray[index] = { ...data_array[index], quantity: 1 };
         } else {
         newArray[index].quantity++;
@@ -126,7 +127,6 @@
         const parentDiv = document.createElement("div");
         parentDiv.classList.add("shoop_content");
         parentDiv.innerHTML = `
-            <img src="${item.image.desktop}" alt="${item.name}" />
                 <div class="text_shoop">
                     <h3 class="name_shoop">${item.name}</h3>
                         <div class="quantity_price_total">
@@ -192,8 +192,9 @@
                     <h4 class="price">$${item.price}</h4>
                     </div>
                 </div>
-                </div>
+                
                 <h2>$${item.quantity * item.price}</h2>
+        </div>
     `;
         finel_order_container.appendChild(parenElement);
         totale_order.innerHTML =
@@ -235,3 +236,5 @@
         add_button.style.display = "block";
         });
     };
+
+    

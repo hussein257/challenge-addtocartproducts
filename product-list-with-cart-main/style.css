@@ -110,12 +110,9 @@
         justify-content: center;
         align-items: center;
         background-color: #ffffff;
-        font-family: RedHatText-bold;
-        display: inline-block; /*inline-block*/
         width: 10em;
         height: 3em;
         line-height: 2.5em;
-        margin: 20px;
         position: relative;
         cursor: pointer;
         overflow: hidden;
@@ -123,9 +120,10 @@
         transition: color 0.5s;
         font-size: 14px;
         border-radius: 25px;
-        font-weight: 500;
+        font-weight: 600;
         color: #222222;
-        
+        gap: 5px;
+        margin-left: 20px;
     }
 
 
@@ -181,7 +179,7 @@
 
     .details h4 {
         color: #858484;
-        font-size: 16px;
+        font-size: 14px;
         text-transform: capitalize;
         font-weight: 300;
     }
@@ -265,8 +263,6 @@
     }
 
 
-
-
     .new_shoop_cart {
         display: flex;
         flex-direction: column;
@@ -303,12 +299,7 @@
         color: #4d4747;
         border-bottom: #eeeeee solid 1px ;
     }
-    .shoop_content img {
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
+
     .text_shoop {
         display: flex;
         justify-content: center;
@@ -319,6 +310,7 @@
     .text_shoop h3 {
         font-size: 14px;
         text-transform: capitalize;
+        font-weight: 700;
     }
 
 
@@ -342,10 +334,20 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-size: 16px;
-        font-weight: 700;
         gap: 20px;
-        color: #b9b7b7;
+        
+    }
+
+    .price_shoop {
+        color: #8d8989;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .totale_shoop {
+        color: #2c2c2c;
+        font-size: 14px;
+        font-weight: 400;
     }
 
     .shoop_content i {
@@ -361,6 +363,11 @@
         font-weight: 700;
         border: #b9b7b7 solid 1.5px;
         cursor: pointer;
+    }
+
+    .shoop_content i:hover {
+        color: #181818;
+        border: #181818 solid 1.5px;
     }
 
     .totale_price_shoopin {
@@ -380,11 +387,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 250px;
+        width: 100%;
         height: 40px;
         background-color: rgb(250, 246, 241);
         font-size: 12px;
-        margin-left: 50px;
+        font-weight: 500;
+        color: #5f5b5b;
+        border-radius: 5px;
+    }
+
+    .neutralText svg {
+        width: 30px;
     }
 
     .neutralText span {
@@ -399,26 +412,26 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        gap: 10px;
     }
 
-    .buttons a {
-        width: 50%;
-        height: 40px;
+
+    .buttons .add_to_order {
+        width: 100%;
+        height: 50px;
         text-decoration: none;
-        color: #c0491a;
-        background-color: #fff;
-        border: 3px solid #c0491a;
-        border-radius: 5px;
+        color: #fff;
+        background-color: #c0491a;
+        border-radius: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
         text-transform: capitalize;
-        font-size: 20px;
+        font-size: 16px;
+        font-weight: 500;
     }
-    .buttons .add_to_order {
-        color: #fff;
-        background-color: #c0491a;
+
+    .buttons .add_to_order:hover {
+        background-color: #a1310f;
     }
 
     .order_container {
@@ -434,7 +447,6 @@
         gap: 20px;
         min-height: 300px;
         max-height: 100%;
-        padding-top: 600px;
         overflow: scroll;
         scroll-padding-top: 7em;
     }
@@ -457,8 +469,9 @@
         height: max-content;
         width: 500px;
         border-radius: 20px;
-        gap: 20PX;
+        gap: 10px;
     }
+
     .finel_order i {
         position: absolute;
         top: 10px;
@@ -466,60 +479,70 @@
         font-size: 30px;
         cursor: pointer;
     }
+
     .finel_order i:active {
         color: red;
     }
+
     .finel_order h1 {
-        color: #c0491a;
+        color: #1b1b1a;
         text-transform: capitalize;
     }
+
     .finel_order p {
-        color: #333;
-        font-size: 15px;
+        color: #636262;
+        font-size: 14px;
+        font-weight: 400;
     }
+
     .finel_order_container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 10px;
+        background-color: rgb(250, 246, 241);
+        border-radius: 5px;
     }
+
     .only_order {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 450px;
-        background-color: #3d3c3c;
         padding: 10px;
-        border-radius: 20px;
-        color: #fff;
+        color: #1a1818;
         text-transform: capitalize;
+        border-bottom: #eeeeee solid 1px ;
+        font-size: 12px;
+        font-weight: 500;
     }
+
     .new-details {
         display: flex;
         gap: 30px;
         justify-content: center;
         align-items: center;
     }
+    
     .new-details img {
-        height: 70px;
-        width: 70px;
-        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        border-radius: 10%;
     }
     .textOrder{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 10PX;
+        gap: 10px;
     }
     .details_price{
         display: flex;
         gap: 30PX;
-        color: #fff;
+        color: #3b3939;
     }
         .details_price p{
-        color: #fff;
+        color: #333131;
         font-weight: 700;
     }
 
