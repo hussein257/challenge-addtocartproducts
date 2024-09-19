@@ -11,14 +11,34 @@
     let shoop_container = document.querySelector(".shoop_container");
     let totale_shoop_price = document.querySelector(".totale_shoop_price");
     const start_new_order = document.querySelector(".start_new_order");
+        const apiKey = "J28VOBvRkgP/Gg1K76zDGQ==4sCrkEaDL6FkQYmZ";
+        const options = {
+            method: "GET",
+            headers: {
+            "X-Api-Key": apiKey,
+            },
+        };
+        const apiURL =
+            "https://api.api-ninjas.com/v1/dogs?name=golden retriever";
+
+        const dataDogs = () => {
+            fetch(apiURL, options)
+            .then((response) => {
+                return response.json();
+            })
+            .then((dataDog) => {
+                console.log(dataDog);
+            })
+            .catch((Error) => console.log(Error));
+        };
+        dataDogs();
+
 
     open_shoopin_cart.onclick = () => {
     shoop_cart.classList.add("new_shoop_cart");
     };
 
-    close_cart.onclick = () => {
-    shoop_cart.classList.remove("new_shoop_cart");
-    };
+
 
     // The first value
     let data_array = [];
