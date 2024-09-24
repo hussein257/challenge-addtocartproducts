@@ -429,7 +429,7 @@
         align-items: center;
         text-transform: capitalize;
         font-size: 16px;
-        font-weight: 500;
+        font-weight: 600;
     }
 
     .buttons .add_to_order:hover {
@@ -447,7 +447,7 @@
         background-color: #33333362;
         width: 100%;
         gap: 20px;
-        min-height: 300px;
+        min-height: 100%;
         max-height: 100%;
         overflow: scroll;
         scroll-padding-top: 7em;
@@ -561,44 +561,27 @@
     }
 
     .finel_order button{
-        margin-left: 150PX;
-        --color: #c0491a;
-        font-family: inherit;
-        display: inline-block; /*inline-block*/
-        width: 8em;
-        height: 2.6em;
-        line-height: 2.5em;
-        position: relative;
-        cursor: pointer;
-        overflow: hidden;
-        border: 2px solid #c0491a;
-        transition: color 0.5s;
-        z-index: 1;
+        width: 100%;
+        height: 50px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #c0491a;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: capitalize;
         font-size: 16px;
-        border-radius: 6px;
-        font-weight: 500;
-        color: #c0491a;
+        font-weight: 600;
+        margin-left: -0;
     }
+    
 
     .finel_order button:hover {
-        color: #fff;
+        background-color: #a1310f;
     }
 
-    .finel_order button:before {
-        top: 100%;
-        left: 100%;
-        transition: all 0.7s;
-    }
 
-    .finel_order button:hover:before {
-        top: -30px;
-        left: -30px;
-    }
-
-    .finel_order button:active:before {
-        background: #c0491a;
-        transition: background 0s;
-    }
     .finel_order_container .thanks_order{
         background-color: #c0491a;
         color: #fff;
